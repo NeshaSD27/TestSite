@@ -15,13 +15,13 @@ function closeMenu() {
 }
 
 // Show the specific page content
-function showPage(pageNumber) {
+function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));  // Hide all pages
-    document.getElementById('page' + pageNumber).classList.add('active'); // Show selected page
+    document.getElementById(pageId).classList.add('active'); // Show selected page
 }
 
-// Initialize with Page 1 visible
+// Initialize with Home page visible
 window.onload = function() {
-    showPage(1);
+    showPage('home');
 }
