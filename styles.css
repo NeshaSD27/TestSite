@@ -31,13 +31,10 @@ body {
     color: black;
 }
 
-.menu-icon, .close-icon {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
 .menu-icon {
+    font-size: 30px;
+    color: black; /* Change the color to black */
+    cursor: pointer;
     position: absolute;
     top: 20px;
     left: 20px;
