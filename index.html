@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        ul {
-            font-size: 18px;
-        }
-    </style>
+    <title>Interactive Menu</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <h1>Welcome to the Test Website</h1>
-    <p>Here are 5 simple instructions:</p>
-    <ul>
-        <li>Step 1: Turn on your device.</li>
-        <li>Step 2: Connect to the network.</li>
-        <li>Step 3: Open your browser.</li>
-        <li>Step 4: Enter the website URL.</li>
-        <li>Step 5: Follow the instructions on the page.</li>
-    </ul>
+
+    <!-- Menu Icon -->
+    <span class="menu-icon" onclick="openMenu()">&#9776; Menu</span>
+
+    <!-- Left Sidebar (Menu) -->
+    <div class="sidebar" id="sidebar">
+        <span class="close-icon" onclick="closeMenu()">&times;</span>
+        <a href="javascript:void(0)" onclick="showPage(1)">Page 1</a>
+        <a href="javascript:void(0)" onclick="showPage(2)">Page 2</a>
+        <a href="javascript:void(0)" onclick="showPage(3)">Page 3</a>
+    </div>
+
+    <!-- Right Content Area -->
+    <div class="content" id="content">
+        <div class="page" id="page1">
+            <h2>Page 1</h2>
+            <p>This is the content of Page 1.</p>
+        </div>
+        <div class="page" id="page2">
+            <h2>Page 2</h2>
+            <p>This is the content of Page 2.</p>
+        </div>
+        <div class="page" id="page3">
+            <h2>Page 3</h2>
+            <p>This is the content of Page 3.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script> <!-- Link to the JS file -->
 </body>
 </html>
