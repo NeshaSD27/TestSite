@@ -32,8 +32,6 @@ body {
 }
 
 .menu-icon {
-    font-size: 30px;
-    color: black; /* Change the color to black */
     cursor: pointer;
     position: absolute;
     top: 20px;
