@@ -3,45 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Menu</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <title>DSK Innovations</title>
+    <link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Top Navigation -->
+    <header>
+        <div class="top-bar">
+            <span class="menu-icon" onclick="openMenu()">
+                <img src="images/menu-icon.png" alt="Menu Icon" width="30" height="30">
+            </span>
+            <span class="branding">DSK&nbsp;&nbsp;Innovations</span>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#blog">Blog</a>
+                <a href="#pages">Pages</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="contact-btn" onclick="showPopup()">Get In Touch</button>
+        </div>
+    </header>
 
-    <!-- Menu Icon (replaced with an image) -->
-    <span class="menu-icon" onclick="openMenu()">
-        <img src="images/menu-icon.png" alt="Menu Icon" width="30" height="30"> <!-- Use the image -->
-    </span>
-
-    <!-- Left Sidebar (Menu) -->
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-        <span class="close-icon" onclick="closeMenu()">&times;</span>
-        <a href="javascript:void(0)" onclick="showPage('home')">Home</a>
-        <a href="javascript:void(0)" onclick="showPage('page1')">Page 1</a>
-        <a href="javascript:void(0)" onclick="showPage('page2')">Page 2</a>
-        <a href="javascript:void(0)" onclick="showPage('page3')">Page 3</a>
+		<span class="close-icon" onclick="closeMenu()">&times;</span>
+		<a href="javascript:void(0)" onclick="showPage('home')">Home</a>
+		<a href="javascript:void(0)" onclick="showPage('page1')">Page 1</a>
+		<a href="javascript:void(0)" onclick="showPage('page2')">Page 2</a>
+		<a href="javascript:void(0)" onclick="showPage('page3')">Page 3</a>
+	</div>
+
+    <!-- Cover Section -->
+    <div class="cover-section">
+        <img src="images/cover.jpg" alt="Cover Image" class="cover-image">
+        <div class="cover-text">
+			<div class="comfort-text">We design your comfort</div>
+            <button class="project-btn">See our projects</button>
+        </div>
     </div>
 
-    <!-- Right Content Area -->
+    <!-- Content Area -->
     <div class="content" id="content">
-        <div class="page" id="home">
-            <h2>Welcome to the Home Page</h2>
-            <p>This is the content of the home page.</p>
-        </div>
-        <div class="page" id="page1">
-            <h2>Page 1</h2>
-            <p>This is the content of Page 1.</p>
-        </div>
-        <div class="page" id="page2">
-            <h2>Page 2</h2>
-            <p>This is the content of Page 2.</p>
-        </div>
-        <div class="page" id="page3">
-            <h2>Page 3</h2>
-            <p>This is the content of Page 3.</p>
+		<div class="page" id="home">
+			<h2>Welcome to DSK Innovations</h2>
+			<p>This is the home page content.</p>
+		</div>
+		<div class="page" id="page1">
+			<h2>Page 1</h2>
+			<p>This is the content of Page 1.</p>
+		</div>
+		<div class="page" id="page2">
+			<h2>Page 2</h2>
+			<p>This is the content of Page 2.</p>
+		</div>
+		<div class="page" id="page3">
+			<h2>Page 3</h2>
+			<p>This is the content of Page 3.</p>
+		</div>
+	</div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-popup" onclick="hidePopup()">&times;</span>
+            <p>Contact us at: <strong>your-email@example.com</strong></p>
         </div>
     </div>
 
-    <script src="scripts.js"></script> <!-- Link to the JS file -->
+    <script src="scripts.js"></script>
 </body>
 </html>
