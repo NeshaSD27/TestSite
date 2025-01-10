@@ -1,27 +1,43 @@
 // Open the sidebar
 function openMenu() {
-    document.getElementById("sidebar").style.width = "250px";
-    document.getElementById("content").style.marginLeft = "250px";
-    document.querySelector(".menu-icon").style.display = "none";
-    document.querySelector(".close-icon").style.display = "block";
+    const sidebar = document.getElementById("sidebar");
+    sidebar.style.width = "250px";
 }
 
 // Close the sidebar
 function closeMenu() {
-    document.getElementById("sidebar").style.width = "0";
-    document.getElementById("content").style.marginLeft = "0";
-    document.querySelector(".menu-icon").style.display = "block";
-    document.querySelector(".close-icon").style.display = "none";
+    const sidebar = document.getElementById("sidebar");
+    sidebar.style.width = "0";
 }
 
-// Show the specific page content
+// Show the popup
+function showPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
+
+// Hide the popup
+function hidePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+// Function to show the selected page and hide others
 function showPage(pageId) {
+    // Get all pages
     const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.classList.remove('active'));  // Hide all pages
-    document.getElementById(pageId).classList.add('active'); // Show selected page
+
+    // Hide all pages
+    pages.forEach(page => {
+        page.style.display = 'none';
+    });
+
+    // Show the selected page
+    const selectedPage = document.getElementById(pageId);
+    if (selectedPage) {
+        selectedPage.style.display = 'block';
+    }
 }
 
-// Initialize with Home page visible
+// Show the home page by default when the page loads
 window.onload = function() {
     showPage('home');
-}
+};
