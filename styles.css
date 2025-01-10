@@ -29,17 +29,15 @@ body {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 700;
-    font-size: 54px;
+    font-size: 84px;
     text-align: center;
     margin: 20px 0;
 
-    /* Text Color and Gradient Border */
+    /* White Text with Darker Shadow */
     color: white;
-    -webkit-text-stroke: 2px linear-gradient(135deg, #ff7e5f, #feb47b);
-    -webkit-text-fill-color: white;
-
-    /* Optional: Add Shadow */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+        3px 3px 8px rgba(0, 0, 0, 0.7),  /* Darker main shadow */
+        2px 2px 4px rgba(0, 0, 0, 0.5);  /* Subtle inner shadow */
 }
 
 .menu-icon {
